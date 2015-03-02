@@ -42,8 +42,7 @@ public class MyCalendarPrinter {
     }
 
     public String getTitle() {
-        // TODO: create method
-        return "[calendar]";
+        return year + "年 " + month + "月\n";
     }
 
     public String getYearTitle() {
@@ -64,7 +63,7 @@ public class MyCalendarPrinter {
     public String toString(int year, int month) {
         prepareFields(year, month);
         StringBuffer sb = new StringBuffer();
-        // TODO: insert title here
+        sb.append(this.getTitle());
         loop: for (int i = 0; i < calendarMatrix.length; i++) {
             for (int j = 0; j < calendarMatrix[i].length; j++) {
                 int day = calendarMatrix[i][j];
